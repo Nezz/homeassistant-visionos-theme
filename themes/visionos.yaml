@@ -1,17 +1,21 @@
 visionos:
   modes:
     light:
-      background-image: "center / cover no-repeat fixed url('https://s3-alpha-sig.figma.com/img/37a7/bb5c/3cce1cb84cadd7abd5c805a1c1e605ec?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=A2J-TNW9sXKSlIQ1kf8uLpjGt7zGR~Q7mM5ZMo~bCj~qo8XAoIh1DZZNNUqpCm-Rjwsp86Q7nlZt3xpjf5h6HFm--K7GTo8-nf50Y2IZX70gRgWzIg8OUHLUfJvcobBqv1oEzmhC43~UFiLxD~ER22UP8Z9BTLJycKwWB1YrpLxSFbf549FRXsR2pFrYMlR1H9oOOaSHTwZC0fZ8wivD9HLxYLFAyvR~mGK7wpW6~pBQtiQQ-cR~G2rYtJ6mdlH88qaS9chQWtRiksypU0bEBl69WjCpRxWVSpKl0z02j6yW9DG1WMNqY4va6OGvnS9nav3xvab11x2iAjo~aQW~YA__')"
+      background-image: "center / cover no-repeat fixed url('/hacsfiles/themes/visionos/day.jpg')"
+      primary-background-color: rgb(52, 52, 52)
+      secondary-background-color: rgb(84, 84, 84)
+      ha-card-background: rgba(128, 128, 128, 0.3)
     dark:
       background-image: "center / cover no-repeat fixed url('/hacsfiles/themes/visionos/night.jpg')"
+      primary-background-color: rgb(25, 25, 25)
+      secondary-background-color: rgb(25, 25, 25)
+      ha-card-background: rgba(0, 0, 0, 0.3)
   # Global
   lovelace-background: var(--background-image)
   primary-color: var(--orange-color)
   light-primary-color: "#B6B6C1" # (icons on left menu) (light: systemGray5 from iOS dark mode, dark: XXX)
-  primary-background-color: rgb(52, 52, 52)
-  secondary-background-color: rgb(84, 84, 84)
   divider-color: rgba(152, 152, 157, 0.3) # from Apple systemGray dark mode
-  accent-color: rgba(255, 159, 9, 1)
+  accent-color: var(--primary-color)
   # Text
   primary-text-color: rgba(255, 255, 255, 0.96)
   secondary-text-color: "#d3d3d3"
@@ -48,7 +52,6 @@ visionos:
   card-background-color: var(--secondary-background-color) # Unused entities table background
   paper-listbox-background-color: var(--primary-background-color)
   ha-card-border-radius: 20px
-  ha-card-background: rgba(128, 128, 128, 0.3)
   paper-card-background-color: var(--ha-card-background)
   rgb-card-background-color: rgb(10, 10, 10) # see https://github.com/basnijholt/lovelace-ios-themes/issues/60
   ha-card-border-width: 0 # https://github.com/basnijholt/lovelace-ios-dark-mode-theme/issues/82#event-7732695357
