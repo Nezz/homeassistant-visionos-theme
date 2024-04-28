@@ -1,3 +1,32 @@
 # visionOS Theme
 
+Theme inspired by visionOS for Home Assistant.
+
+## Installation
+
+1. You can install the theme with [HACS](https://hacs.xyz/docs/setup/download):
+
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Nezz&repository=homeassistant-visionos-theme&category=theme)
+
+2. If this is the first theme you installed, add the following code to your `configuration.yaml` file (reboot required):
+
+```yaml
+frontend:
+  themes: !include_dir_merge_named themes
+```
+
+3. (Optional) You can set this as the default theme with the following automation:
+```
+alias: Frontend - Change theme
+trigger:
+  - platform: homeassistant
+    event: start
+action:
+  - service: frontend.set_theme
+    data:
+      name: visionos
+```
+
+## Remarks
+
 Based on [Bas Nijholt's iOS Themes](https://github.com/basnijholt/lovelace-ios-themes)
