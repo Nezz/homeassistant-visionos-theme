@@ -1,0 +1,7 @@
+{
+    "name": "visionOS Theme",
+    "hacs": "0.21.2",
+    "filename": "visionos.yaml",
+    "render_readme": true
+  }
+  
