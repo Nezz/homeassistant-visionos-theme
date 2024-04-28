@@ -1,7 +1,7 @@
 {
     "name": "visionOS Theme",
-    "hacs": "0.21.2",
+    "homeassistant": "2024.5.0b0",
     "filename": "visionos.yaml",
     "render_readme": true
-  }
+}
   
