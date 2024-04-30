@@ -2,13 +2,15 @@ visionos:
   modes:
     light:
       background-image: "center / cover no-repeat fixed url('/hacsfiles/themes/visionos/day.jpg')"
-      primary-background-color: rgb(52, 52, 52)
-      secondary-background-color: rgb(84, 84, 84)
+      primary-background-color: rgb(52, 50, 47)
+      secondary-background-color: rgb(84, 80, 76)
+      app-header-background-color: rgba(84, 80, 76, 0.3)
       ha-card-background: rgba(128, 128, 128, 0.3)
     dark:
       background-image: "center / cover no-repeat fixed url('/hacsfiles/themes/visionos/night.jpg')"
-      primary-background-color: rgb(25, 25, 25)
-      secondary-background-color: rgb(25, 25, 25)
+      primary-background-color: rgb(25, 24, 22)
+      secondary-background-color: rgb(25, 24, 22)
+      app-header-background-color: rgba(25, 24, 22, 0.3)
       ha-card-background: rgba(0, 0, 0, 0.3)
   # Global
   lovelace-background: var(--background-image)
@@ -75,7 +77,6 @@ visionos:
   dialog-box-shadow: var(--ha-card-box-shadow)
   ha-dialog-surface-background: var(--ha-card-background)
   # Header
-  app-header-background-color: var(--ha-card-background)
   app-header-backdrop-filter: var(--ha-card-backdrop-filter)
   app-header-edit-background-color: rgba(0, 0, 0, 0.2)
   # Colors
@@ -101,6 +102,7 @@ visionos:
   clear-background-color: var(--ha-card-background) # see https://github.com/basnijholt/lovelace-ios-themes/issues/64
   mdc-theme-surface: var(--secondary-background-color) # this should be opaque as it's used by default for many overlays
   material-background-color: var(--secondary-background-color)
+  app-theme-color: rgb(122, 114, 106) # Average header color, used on the top of the browser
   # Custom
   mcg-title-letter-spacing: .15em
   mini-media-player-base-color: white
