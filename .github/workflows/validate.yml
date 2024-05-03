@@ -1,0 +1,17 @@
+name: Validations
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  hacs:
+    name: HACS
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: HACS Action
+        uses: "hacs/action@main"
+        with:
+          category: "theme"
