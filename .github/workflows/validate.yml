@@ -1,0 +1,24 @@
+name: Validations
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  hacs:
+    name: HACS Validation
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: HACS Action
+        uses: "hacs/action@main"
+        with:
+          category: "theme"
+
+  hassfest:
+    name: Hassfest Validation
+    runs-on: "ubuntu-latest"
+    steps:
+        - uses: "actions/checkout@v4"
+        - uses: "home-assistant/actions/hassfest@master"
