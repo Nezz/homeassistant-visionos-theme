@@ -8,17 +8,10 @@ on:
 
 jobs:
   hacs:
-    name: HACS Validation
+    name: HACS
     runs-on: "ubuntu-latest"
     steps:
       - name: HACS Action
         uses: "hacs/action@main"
         with:
           category: "theme"
-
-  hassfest:
-    name: Hassfest Validation
-    runs-on: "ubuntu-latest"
-    steps:
-        - uses: "actions/checkout@v4"
-        - uses: "home-assistant/actions/hassfest@master"
