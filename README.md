@@ -12,7 +12,10 @@ Theme inspired by visionOS for Home Assistant with automatic dark mode support.
 
 [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Nezz&repository=homeassistant-visionos-theme&category=theme)
 
-> [!NOTE]  
+> [!NOTE]
+> **If HACS is in experimental mode, the background images will not load.**
+> You can disable it from Settings > Devices & services > HACS > Configure.
+> 
 > The background blur effects require Home Assistant 2024.5
 
 2. You should see the "visionos" theme appear in your list of themes.
