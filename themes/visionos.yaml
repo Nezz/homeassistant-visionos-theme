@@ -1,14 +1,14 @@
 visionos:
   modes:
     light:
-      background-image: "center / cover no-repeat fixed url('/hacsfiles/themes/visionos/day.jpg')"
+      background-image: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/Nezz/homeassistant-visionos-theme/1.1/themes/day.jpg')"
       primary-background-color: rgb(52, 50, 47)
       secondary-background-color: rgb(84, 80, 76)
       app-header-background-color: rgba(84, 80, 76, 0.3)
       ha-card-background: rgba(128, 128, 128, 0.3)
       app-theme-color: rgb(122, 114, 106) # Average header color, used on the top of the browser
     dark:
-      background-image: "center / cover no-repeat fixed url('/hacsfiles/themes/visionos/night.jpg')"
+      background-image: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/Nezz/homeassistant-visionos-theme/1.1/themes/night.jpg')"
       primary-background-color: rgb(25, 24, 22)
       secondary-background-color: rgb(25, 24, 22)
       app-header-background-color: rgba(25, 24, 22, 0.3)
