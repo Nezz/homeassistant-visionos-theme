@@ -1,7 +1,8 @@
-MIT License
+# MIT License
 
-Copyright (c) 2019 Bas Nijholt
-Copyright (c) 2024 Adam Kapos
+Copyright (c) 2019 Bas Nijholt\
+Copyright (c) 2024 Adam Kapos\
+Copyright (c) 2025 Wessam Lauf
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
