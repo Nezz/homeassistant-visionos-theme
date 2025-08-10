@@ -271,6 +271,14 @@ Liquid Glass:
             .slider .slider-track-bar {
               border-radius: 0px !important;
             }
+        hui-cover-tilt-position-card-feature $:
+          ha-control-slider$: |
+            .container {
+              --control-slider-border-radius: var(--ha-card-border-radius);
+            }
+            .slider .slider-track-bar {
+              border-radius: 0px !important;
+            }
         hui-update-actions-card-feature $:
           ha-control-button$: |
             .button {
