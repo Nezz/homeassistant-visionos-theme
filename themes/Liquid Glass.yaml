@@ -157,13 +157,13 @@ Liquid Glass:
       background: var(--ha-card-background) !important;
     }
 
-    # Mushroom title card          
+    # Mushroom title card
     :host(mushroom-title-card) ha-card {
       background: none !important;
-      backdrop-filter: none !important;                
+      backdrop-filter: none !important;
     }
     :host(mushroom-title-card) ha-card::before {
-      content: none !important;                                                    
+      content: none !important;
     }
 
     # Bubble card
@@ -200,6 +200,12 @@ Liquid Glass:
               --control-number-buttons-border-radius: var(--ha-card-border-radius);
             }
         hui-humidifier-toggle-card-feature $:
+          ha-control-select$: |
+            .container {
+              --control-select-border-radius: var(--ha-card-border-radius);
+              --control-select-button-border-radius: var(--ha-card-border-radius);
+            }
+        hui-climate-hvac-modes-card-feature $:
           ha-control-select$: |
             .container {
               --control-select-border-radius: var(--ha-card-border-radius);
@@ -243,6 +249,11 @@ Liquid Glass:
               --mdc-shape-medium: var(--ha-card-border-radius) !important;
             }
         hui-cover-open-close-card-feature $:
+          ha-control-button$: |
+            .button {
+              --control-button-border-radius: var(--ha-card-border-radius);
+            }
+        hui-cover-tilt-card-feature $:
           ha-control-button$: |
             .button {
               --control-button-border-radius: var(--ha-card-border-radius);
