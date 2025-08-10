@@ -1,10 +1,14 @@
-# visionOS & iOS 26 Liquid Glass
+# visionOS & iOS 26 Liquid Glass Theme
 
 Theme inspired by visionOS for Home Assistant with automatic dark mode support.
 
-![Demo day](https://github.com/Nezz/homeassistant-visionos-theme/assets/431167/1b1d9e34-ac45-4a8e-a801-789441cdf06c)
-![Demo night](https://github.com/Nezz/homeassistant-visionos-theme/assets/431167/b503b0f0-3371-4a55-99bc-cf6152ad1510)
+### visionOS
+<img width="500" alt="vision light" src="https://github.com/user-attachments/assets/37b0c69a-c876-4d13-ac05-e48ccc178785" /><img width="500" alt="vision dark" src="https://github.com/user-attachments/assets/908e3338-6573-4a9c-b483-90e352e9977c" />
+☀️ Light mode & 🌑 Dark mode
 
+### Liquid Glass
+<img width="500" alt="ios light" src="https://github.com/user-attachments/assets/dde7aa13-2dad-42f6-8239-3ffa7fe2477b" /><img width="500" alt="ios dark" src="https://github.com/user-attachments/assets/13e3f550-5935-4cc6-825f-ae1bf90d1070" />
+☀️ Light mode & 🌑 Dark mode
 
 ## Installation
 
