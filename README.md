@@ -13,7 +13,7 @@ Theme inspired by visionOS for Home Assistant with automatic dark mode support.
 [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Nezz&repository=homeassistant-visionos-theme&category=theme)
 
 > [!NOTE]  
-> The background blur effects require Home Assistant 2024.5
+> Install the [`card-mod`](https://github.com/thomasloven/lovelace-card-mod) integration via HACS to fix issues with dropdowns.
 
 2. You should see the "visionos" theme appear in your list of themes.
 
