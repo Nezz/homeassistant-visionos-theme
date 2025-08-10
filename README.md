@@ -1,4 +1,4 @@
-# visionOS Theme
+# visionOS & iOS 26 Liquid Glass
 
 Theme inspired by visionOS for Home Assistant with automatic dark mode support.
 
@@ -15,7 +15,7 @@ Theme inspired by visionOS for Home Assistant with automatic dark mode support.
 > [!NOTE]  
 > Install the [`card-mod`](https://github.com/thomasloven/lovelace-card-mod) integration via HACS to fix issues with dropdowns.
 
-2. You should see the "visionos" theme appear in your list of themes.
+2. You should see the "Liquid Glass" and "visionos" themes appear in your list of themes.
 
 If it's missing, try reloading your themes or adding the following code to your `configuration.yaml` file (reboot required):
 
