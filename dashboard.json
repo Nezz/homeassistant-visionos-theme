@@ -1,0 +1,172 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.dashboard_overview",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "title": "Home",
+          "cards": [],
+          "type": "sections",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "weather-forecast",
+                  "entity": "weather.demo_weather_south",
+                  "forecast_type": "daily"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "tile",
+                  "entity": "light.bed_light"
+                },
+                {
+                  "type": "tile",
+                  "entity": "light.ceiling_lights"
+                },
+                {
+                  "type": "tile",
+                  "entity": "light.kitchen_lights",
+                  "features": [
+                    {
+                      "type": "light-brightness"
+                    }
+                  ]
+                },
+                {
+                  "type": "tile",
+                  "entity": "light.living_room_rgbww_lights",
+                  "features": [
+                    {
+                      "type": "light-brightness"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "type": "humidifier",
+                      "entity": "humidifier.humidifier",
+                      "features": [
+                        {
+                          "type": "humidifier-toggle"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "thermostat",
+                      "entity": "climate.heatpump",
+                      "features": [
+                        {
+                          "type": "climate-hvac-modes"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "tile",
+                      "entity": "vacuum.0_ground_floor",
+                      "name": "Artu",
+                      "features": [
+                        {
+                          "type": "vacuum-commands",
+                          "commands": [
+                            "start_pause",
+                            "stop",
+                            "clean_spot"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tile",
+                      "entity": "sensor.sun_next_dawn",
+                      "name": "Next cleaning",
+                      "icon": "mdi:vacuum",
+                      "vertical": false,
+                      "hide_state": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "tile",
+                  "entity": "cover.pergola_roof",
+                  "features": [
+                    {
+                      "type": "cover-tilt-position"
+                    }
+                  ]
+                },
+                {
+                  "type": "tile",
+                  "entity": "cover.living_room_window",
+                  "features": [
+                    {
+                      "type": "cover-open-close"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "initial_view": "listWeek",
+                  "type": "calendar",
+                  "entities": [
+                    "calendar.calendar_1",
+                    "calendar.calendar_2"
+                  ]
+                }
+              ]
+            }
+          ],
+          "max_columns": 3
+        },
+        {
+          "title": "Bedroom",
+          "path": "bedroom",
+          "cards": []
+        },
+        {
+          "title": "Living Room",
+          "path": "living-room",
+          "cards": []
+        },
+        {
+          "title": "Kitchen",
+          "path": "kitchen",
+          "cards": []
+        }
+      ]
+    }
+  }
+}
