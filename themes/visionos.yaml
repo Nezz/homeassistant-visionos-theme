@@ -16,7 +16,6 @@ visionos:
       app-theme-color: rgb(0, 0, 0)
   # Global
   lovelace-background: var(--background-image)
-  primary-color: var(--orange-color)
   light-primary-color: "#B6B6C1" # (icons on left menu) (light: systemGray5 from iOS dark mode, dark: XXX)
   divider-color: rgba(152, 152, 157, 0.3) # from Apple systemGray dark mode
   accent-color: var(--primary-color)
@@ -94,6 +93,18 @@ visionos:
   yellow-color: "#FFD60A"
   orange-color: "#FF9F0A"
   brown-color: "#AC8E68"
+  primary-color: var(--orange-color)
+  ha-color-primary-05: "#331f00"
+  ha-color-primary-10: "#663d00"
+  ha-color-primary-20: "#995c00"
+  ha-color-primary-30: "#cc7a00"
+  ha-color-primary-40: var(--primary-color)
+  ha-color-primary-50: "#ffa31a"
+  ha-color-primary-60: "#ffad33"
+  ha-color-primary-70: "#ffc266"
+  ha-color-primary-80: "#ffd699"
+  ha-color-primary-90: "#ffebcc"
+  ha-color-primary-95: "#fff5e6"
   # Other
   paper-dialog-background-color: rgba(55, 55, 55, 0.8) # e.g., background of more-info
   paper-item-icon-color: white # also should mini-media-player icon white (but doesn't work by itself)
