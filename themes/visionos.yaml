@@ -157,13 +157,22 @@ visionos:
       background: var(--ha-card-background) !important;
     }
 
-    # Mushroom title card          
+    # Markdown card with text_only
+    ha-card.text-only {
+      background: none !important;
+      backdrop-filter: none !important;
+    }
+    ha-card.text-only::before {
+      content: none !important;
+    }
+
+    # Mushroom title card
     :host(mushroom-title-card) ha-card {
       background: none !important;
-      backdrop-filter: none !important;                
+      backdrop-filter: none !important;
     }
     :host(mushroom-title-card) ha-card::before {
-      content: none !important;                                                    
+      content: none !important;
     }
 
     # Bubble card
