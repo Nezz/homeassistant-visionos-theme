@@ -126,6 +126,10 @@ Liquid Glass:
   mcg-title-letter-spacing: .15em
   mini-media-player-base-color: white
   mini-media-player-icon-color: white
+  # Bubble Card Popup
+  bubble-pop-up-border-radius: 42px
+  bubble-pop-up-main-background-color: rgba(255, 255, 255, 0.1)
+  bubble-pop-up-background-color: rgba(255, 255, 255, 0.05)
   # Added for https://github.com/basnijholt/lovelace-ios-dark-mode-theme/issues/72
   input-ink-color: var(--primary-text-color)
   input-fill-color: transparent
@@ -200,6 +204,51 @@ Liquid Glass:
         content: none !important;
         background: none !important;
         backdrop-filter: none !important;
+      }
+
+      # Bubble card popup
+      .bubble-pop-up-container {
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        border-radius: var(--bubble-pop-up-border-radius) !important;
+      }
+      .bubble-pop-up {
+        backdrop-filter: blur(20px) !important;
+        background: rgba(255, 255, 255, 0.1) !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        box-shadow: var(--ha-card-box-shadow) !important;
+      }
+      .bubble-header,
+      .bubble-header-container {
+        backdrop-filter: blur(20px) !important;
+        background: rgba(255, 255, 255, 0.15) !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        border-radius: 30px !important;
+      }
+      .bubble-search-input,
+      .bubble-input {
+        backdrop-filter: blur(20px) !important;
+        background: rgba(255, 255, 255, 0.15) !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        border-radius: 30px !important;
+        color: white !important;
+      }
+      .bubble-close-button,
+      .bubble-close-button-container {
+        background: rgba(255, 255, 255, 0.2) !important;
+        backdrop-filter: blur(20px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        border-radius: 50% !important;
+        color: white !important;
+      }
+      .bubble-close-button ha-icon,
+      .bubble-close-button-container ha-icon {
+        color: white !important;
+        --mdc-icon-size: 24px !important;
+      }
+      .bubble-close-button svg,
+      .bubble-close-button-container svg {
+        fill: white !important;
+        color: white !important;
       }
 
       # Mushroom chips card
