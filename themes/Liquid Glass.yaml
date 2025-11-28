@@ -2,7 +2,8 @@ Liquid Glass:
   modes:
     light:
       #background-image: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/Nezz/homeassistant-visionos-theme/refs/heads/static/macOS_26_Light.webp')"
-      background-image: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/Hagland/homeassistant-visionos-theme/refs/heads/master/Living%20room.png')"
+      # background-image: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/Hagland/homeassistant-visionos-theme/refs/heads/master/Living%20room.png')"
+      background-image: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/Hagland/homeassistant-visionos-theme/refs/heads/master/living_room.webp')"
       primary-background-color: rgb(76, 80, 84)
       secondary-background-color: rgb(76, 80, 84)
       app-header-background-color: rgba(76, 80, 84, 0.3)
@@ -10,7 +11,8 @@ Liquid Glass:
       app-theme-color: rgb(91, 138, 168) # Average header color, used on the top of the browser
     dark:
       # background-image: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/Nezz/homeassistant-visionos-theme/refs/heads/static/macOS_26_Dark.webp')"
-      background-image: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/Hagland/homeassistant-visionos-theme/refs/heads/master/Living%20room.png')"
+      # background-image: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/Hagland/homeassistant-visionos-theme/refs/heads/master/Living%20room.png')"
+      background-image: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/Hagland/homeassistant-visionos-theme/refs/heads/master/living_room.webp')"
       primary-background-color: rgb(18, 11, 25)
       secondary-background-color: rgb(18, 11, 25)
       app-header-background-color: rgba(18, 11, 25, 0.3)
