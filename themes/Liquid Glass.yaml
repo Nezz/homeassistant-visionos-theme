@@ -78,6 +78,7 @@ Liquid Glass:
   ha-dialog-surface-backdrop-filter: var(--ha-card-backdrop-filter)
   dialog-box-shadow: var(--ha-card-box-shadow)
   ha-dialog-surface-background: var(--ha-card-background)
+  ha-dialog-scrim-backdrop-filter: none
   # Header
   app-header-backdrop-filter: var(--ha-card-backdrop-filter)
   app-header-edit-background-color: rgba(0, 0, 0, 0.2)
