@@ -194,19 +194,6 @@ visionos:
       content: none !important;
     }
 
-    /* Bubble card */
-    :host(.type-custom-bubble-card) ha-card {
-      background: none !important;
-      backdrop-filter: none !important;
-      box-shadow: none !important;
-      border-radius: 0px !important;
-    }
-    :host(.type-custom-bubble-card) ha-card::before {
-      content: none !important;
-      background: none !important;
-      backdrop-filter: none !important;
-    }
-
     /* Mushroom chips card */
     :host(mushroom-chips-card) ha-card {
       background: none !important;
