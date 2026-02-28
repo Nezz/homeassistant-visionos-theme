@@ -283,6 +283,11 @@ Liquid Glass:
             .button {
               --control-button-border-radius: var(--ha-card-border-radius);
             }
+        hui-lock-commands-card-feature $:
+          ha-control-button$: |
+            .button {
+              --control-button-border-radius: var(--ha-card-border-radius);
+            }
         hui-cover-position-card-feature $:
           ha-control-slider$: |
             .container {
