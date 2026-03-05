@@ -1,0 +1,109 @@
+views:
+  - title: Home
+    cards: []
+    type: sections
+    sections:
+      - type: grid
+        cards:
+          - type: custom:clock-weather-card
+            entity: weather.demo_weather_south
+            forecast_type: daily
+          - type: tile
+            entity: vacuum.demo_vacuum_0_ground_floor
+            name: Artu
+            vertical: false
+            features:
+              - type: vacuum-commands
+                commands:
+                  - start_pause
+                  - stop
+                  - clean_spot
+            features_position: bottom
+            grid_options:
+              columns: 12
+              rows: 2
+      - type: grid
+        cards:
+          - type: tile
+            entity: light.bed_light
+          - type: tile
+            entity: light.ceiling_lights
+          - type: tile
+            entity: light.kitchen_lights
+            features:
+              - type: light-brightness
+          - type: tile
+            entity: light.living_room_rgbww_lights
+            features:
+              - type: light-brightness
+          - type: tile
+            entity: lock.poorly_installed_door
+            vertical: false
+            features_position: bottom
+            features:
+              - type: lock-commands
+          - type: tile
+            entity: water_heater.demo_water_heater
+            name: Heater
+            vertical: false
+            features:
+              - type: target-temperature
+            features_position: bottom
+          - type: tile
+            entity: cover.pergola_roof
+            features:
+              - type: cover-tilt-position
+              - type: cover-tilt
+          - type: tile
+            entity: cover.living_room_window
+            features:
+              - type: cover-position
+              - type: cover-open-close
+      - type: grid
+        cards:
+          - type: humidifier
+            entity: humidifier.humidifier
+            features:
+              - type: humidifier-toggle
+            grid_options:
+              columns: 6
+              rows: 5
+          - type: thermostat
+            entity: climate.heatpump
+            features:
+              - type: climate-hvac-modes
+            grid_options:
+              columns: 6
+              rows: 5
+          - type: todo-list
+            entity: todo.shopping_list
+    max_columns: 3
+    badges:
+      - type: entity
+        show_name: true
+        show_state: true
+        show_icon: true
+        entity: device_tracker.demo_home_boy
+        state_content: state
+      - type: entity
+        show_name: true
+        show_state: true
+        show_icon: true
+        entity: media_player.walkman
+      - type: entity
+        show_name: true
+        show_state: true
+        show_icon: true
+        entity: alarm_control_panel.security
+      - type: entity
+        show_name: true
+        show_state: true
+        show_icon: true
+        entity: sensor.outside_humidity
+        name: Humidity
+      - type: entity
+        show_name: true
+        show_state: true
+        show_icon: true
+        entity: sensor.outside_temperature
+        name: Outside
