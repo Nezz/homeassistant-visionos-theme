@@ -15,9 +15,15 @@ visionos:
       ha-card-background: rgba(0, 0, 0, 0.3)
       app-theme-color: rgb(0, 0, 0)
 
+  # Global
   lovelace-background: var(--background-image)
   light-primary-color: rgb(241, 241, 241)
   divider-color: rgba(152, 152, 157, 0.3)
+
+  # 🔥 Hauptfarbe komplett auf Rot
+  red-color: "#FF453A"
+  primary-color: var(--red-color)
+  accent-color: var(--red-color)
 
   # Text
   primary-text-color: rgba(255, 255, 255, 0.96)
@@ -37,16 +43,24 @@ visionos:
 
   # States
   state-icon-color: var(--primary-text-color)
-  state-icon-active-color: var(--primary-color)
+  state-icon-active-color: var(--red-color)
+  state-active-color: var(--red-color)
   state-icon-unavailable-color: var(--disabled-text-color)
   state-inactive-color: var(--disabled-text-color)
-  paper-item-icon-active-color: var(--primary-color)
+  paper-item-icon-active-color: var(--red-color)
+
+  # HA interne State-Farben (verhindert GELB)
+  state-script-color: var(--red-color)
+  state-automation-color: var(--red-color)
+  state-alert-color: var(--red-color)
+  state-warning-color: var(--red-color)
+  state-unavailable-color: var(--disabled-text-color)
 
   # Slider
   paper-slider-knob-color: "#FFFFFF"
   paper-slider-knob-start-color: var(--paper-slider-knob-color)
   paper-slider-pin-color: var(--paper-slider-knob-color)
-  paper-slider-active-color: var(--primary-color)
+  paper-slider-active-color: var(--red-color)
   paper-slider-secondary-color: var(--paper-slider-knob-color)
   paper-slider-container-color: rgba(255, 255, 255, 0.5)
   paper-slider-font-color: "#000"
@@ -55,7 +69,9 @@ visionos:
   # Badges
   label-badge-background-color: "#23232E"
   label-badge-text-color: "#F1F1F1"
-  label-badge-red: var(--primary-color)
+  label-badge-red: rgba(255, 69, 58, 0.7)
+  label-badge-yellow: var(--red-color)
+  label-badge-warning: var(--red-color)
 
   # Cards
   card-background-color: var(--secondary-background-color)
@@ -78,7 +94,7 @@ visionos:
   table-row-alternative-background-color: var(--secondary-background-color)
 
   # Switches
-  switch-checked-track-color: var(--primary-color)
+  switch-checked-track-color: var(--red-color)
   switch-checked-button-color: "#FFF"
   switch-unchecked-track-color: var(--disabled-text-color)
   switch-unchecked-button-color: "#FFF"
@@ -93,6 +109,47 @@ visionos:
   app-header-backdrop-filter: var(--ha-card-backdrop-filter)
   app-header-edit-background-color: rgba(0, 0, 0, 0.2)
 
+  # Apple-Farbpalette (NICHT verändert außer Gelb/Orange)
+  red-color: "#FF453A"
+  pink-color: "#FF375F"
+  purple-color: "#BF5AF2"
+  indigo-color: "#5E5CE6"
+  blue-color: "#0A84FF"
+  light-blue-color: "#66D4CF"
+  cyan-color: "#5AC8F5"
+  teal-color: "#6AC4DC"
+  green-color: "#32D74B"
+  yellow-color: var(--red-color)
+  orange-color: var(--red-color)
+  brown-color: "#AC8E68"
+
+  # Farbskala komplett in Rot
+  ha-color-primary-05: "#330a0a"
+  ha-color-primary-10: "#661414"
+  ha-color-primary-20: "#991f1f"
+  ha-color-primary-30: "#cc2929"
+  ha-color-primary-40: "#FF453A"
+  ha-color-primary-50: "#ff6a61"
+  ha-color-primary-60: "#ff8a82"
+  ha-color-primary-70: "#ffaba4"
+  ha-color-primary-80: "#ffccc7"
+  ha-color-primary-90: "#ffe6e3"
+  ha-color-primary-95: "#fff3f1"
+
+  # HA interne Warnfarben
+  warning-color: var(--red-color)
+  info-color: var(--red-color)
+
+  # Material Design Fallbacks
+  mdc-theme-primary: var(--red-color)
+  mdc-theme-secondary: var(--red-color)
+  mdc-theme-error: var(--red-color)
+
+  # Energy Dashboard Farben
+  energy-grid-consumption-color: var(--red-color)
+  energy-solar-color: var(--red-color)
+  energy-non-fossil-color: var(--red-color)
+
   # Misc
   paper-dialog-background-color: rgba(55, 55, 55, 0.8)
   paper-item-icon-color: white
@@ -106,6 +163,7 @@ visionos:
   mdc-checkbox-unchecked-color: "#FFF"
   mdc-radio-unchecked-color: "#FFF"
 
+  # Custom
   mcg-title-letter-spacing: .15em
   mini-media-player-base-color: white
   mini-media-player-icon-color: white
@@ -118,7 +176,7 @@ visionos:
   input-dropdown-icon-color: var(--primary-text-color)
   input-idle-line-color: var(--secondary-text-color)
   input-hover-line-color: var(--secondary-text-color)
-  codemirror-property: var(--primary-color)
+  codemirror-property: var(--accent-color)
   md-list-container-color: none
 
   wa-border-style: none
@@ -161,6 +219,7 @@ visionos:
       content: none !important;
     }
 
+    /* Energy dashboard */
     .mdc-data-table,
     .mdc-data-table__row,
     .mdc-data-table__header-cell,
@@ -168,6 +227,7 @@ visionos:
       background: none !important;
     }
 
+    /* Markdown card with text_only */
     ha-card.text-only {
       background: none !important;
       backdrop-filter: none !important;
@@ -177,6 +237,7 @@ visionos:
       content: none !important;
     }
 
+    /* Mushroom title card */
     :host(mushroom-title-card) ha-card {
       background: none !important;
       backdrop-filter: none !important;
@@ -185,6 +246,7 @@ visionos:
       content: none !important;
     }
 
+    /* Mushroom chips card */
     :host(mushroom-chips-card) ha-card {
       background: none !important;
       backdrop-filter: none !important;
