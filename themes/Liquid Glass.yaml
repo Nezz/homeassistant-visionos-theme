@@ -151,13 +151,18 @@ Liquid Glass:
 
   card-mod-theme: "Liquid Glass"
   card-mod-drawer: |
-    .mdc-drawer, .sidebar-shell {
+    .mdc-drawer {
       background-color: var(--app-header-background-color) !important;
       backdrop-filter: var(--ha-card-backdrop-filter);
+    }
+
+    .sidebar-shell {
+      background-color: var(--app-header-background-color) !important;
     }
   card-mod-sidebar: |
     :host {
       background: none !important;
+      backdrop-filter: var(--ha-card-backdrop-filter);
     }
 
     ha-list-item-button,

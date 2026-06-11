@@ -149,13 +149,18 @@ visionos:
 
   card-mod-theme: "visionos"
   card-mod-drawer: |
-    .mdc-drawer, .sidebar-shell {
+    .mdc-drawer {
       background-color: var(--app-header-background-color) !important;
       backdrop-filter: var(--ha-card-backdrop-filter);
+    }
+
+    .sidebar-shell {
+      background-color: var(--app-header-background-color) !important;
     }
   card-mod-sidebar: |
     :host {
       background: none !important;
+      backdrop-filter: var(--ha-card-backdrop-filter);
     }
   card-mod-card: |
     ha-card {
