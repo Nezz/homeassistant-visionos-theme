@@ -172,7 +172,7 @@ Liquid Glass:
     }
 
     ha-list-item-button,
-    ha-list-item-button.selected::before
+    ha-list-item-button.selected::before {
       border-radius: var(--ha-card-border-radius) !important;
       --ha-list-item-focus-radius: var(--ha-card-border-radius) !important;
     }
