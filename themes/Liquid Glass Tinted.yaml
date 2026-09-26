@@ -20,7 +20,6 @@ Liquid Glass Tinted:
       sidebar-selected-text-color: var(--primary-text-color)
       disabled-color: rgb(120, 120, 128)
       state-icon-color: rgba(0, 0, 0, 0.7)
-      control-button-icon-color: var(--state-icon-color)
       divider-color: rgba(60, 60, 67, 0.2)
       primary-text-color: rgba(0, 0, 0, 0.85)
       secondary-text-color: rgba(60, 60, 67, 0.6)
@@ -67,6 +66,7 @@ Liquid Glass Tinted:
       sidebar-icon-color: rgb(241, 241, 241)
       sidebar-text-color: rgb(241, 241, 241)
       disabled-color: rgb(160, 160, 168)
+      history-unknown-color: "#AEAEB2"
   # Global
   lovelace-background: var(--background-image)
   light-primary-color: rgb(241, 241, 241) # Icons on sidebar
@@ -149,6 +149,14 @@ Liquid Glass Tinted:
   yellow-color: "#FFD60A"
   orange-color: "#FF9F0A"
   brown-color: "#AC8E68"
+  graph-color-1: var(--cyan-color)
+  energy-grid-consumption-color: var(--cyan-color)
+  energy-grid-return-color: var(--purple-color)
+  energy-solar-color: var(--orange-color)
+  energy-battery-out-color: var(--green-color)
+  energy-battery-in-color: var(--pink-color)
+  energy-gas-color: var(--red-color)
+  energy-water-color: var(--light-blue-color)
   primary-color: var(--orange-color)
   ha-color-primary-05: "#331f00"
   ha-color-primary-10: "#663d00"
@@ -236,6 +244,28 @@ Liquid Glass Tinted:
     ha-md-list-item,
     ha-md-list-item.selected::before {
       border-radius: var(--ha-card-border-radius) !important;
+    }
+  card-mod-root: |
+    ha-tab-group::part(scroll-button) {
+      background: none !important;
+    }
+
+    ha-tab-group::part(nav) {
+      mask-image: linear-gradient(90deg, transparent, #000 16px, #000 calc(100% - 16px), transparent);
+    }
+
+    ha-menu-button,
+    .action-items > * {
+      color: var(--state-icon-color);
+    }
+  card-mod-state-history-charts: |
+    .entry-container:first-of-type {
+      border-top: none !important;
+      margin-top: 0 !important;
+    }
+
+    .entry-container.timeline:first-of-type {
+      margin-top: var(--timeline-top-margin) !important;
     }
   card-mod-card: |
     ha-card {

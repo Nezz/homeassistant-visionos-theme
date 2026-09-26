@@ -95,6 +95,15 @@ visionos:
   yellow-color: "#FFD60A"
   orange-color: "#FF9F0A"
   brown-color: "#AC8E68"
+  graph-color-1: var(--cyan-color)
+  energy-grid-consumption-color: var(--cyan-color)
+  energy-grid-return-color: var(--purple-color)
+  energy-solar-color: var(--orange-color)
+  energy-battery-out-color: var(--green-color)
+  energy-battery-in-color: var(--pink-color)
+  energy-gas-color: var(--red-color)
+  energy-water-color: var(--light-blue-color)
+  history-unknown-color: "#AEAEB2"
   primary-color: var(--orange-color)
   ha-color-primary-05: "#331f00"
   ha-color-primary-10: "#663d00"
@@ -165,6 +174,23 @@ visionos:
     :host {
       background: none !important;
       backdrop-filter: var(--ha-card-backdrop-filter);
+    }
+  card-mod-root: |
+    ha-tab-group::part(scroll-button) {
+      background: none !important;
+    }
+
+    ha-tab-group::part(nav) {
+      mask-image: linear-gradient(90deg, transparent, #000 16px, #000 calc(100% - 16px), transparent);
+    }
+  card-mod-state-history-charts: |
+    .entry-container:first-of-type {
+      border-top: none !important;
+      margin-top: 0 !important;
+    }
+
+    .entry-container.timeline:first-of-type {
+      margin-top: var(--timeline-top-margin) !important;
     }
   card-mod-card: |
     ha-card {
