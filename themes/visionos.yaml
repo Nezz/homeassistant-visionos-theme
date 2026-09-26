@@ -7,6 +7,22 @@ visionos:
       app-header-background-color: rgba(84, 80, 76, 0.3)
       ha-card-background: rgba(128, 128, 128, 0.3)
       app-theme-color: rgb(122, 114, 106) # Average header color, used on the top of the browser
+      ha-color-fill-neutral-quiet-resting: rgba(255, 255, 255, 0.1)
+      ha-color-fill-neutral-quiet-hover: rgba(255, 255, 255, 0.16)
+      ha-color-fill-neutral-quiet-active: rgba(255, 255, 255, 0.1)
+      ha-color-fill-neutral-normal-resting: rgba(255, 255, 255, 0.16)
+      ha-color-fill-neutral-normal-hover: rgba(255, 255, 255, 0.22)
+      ha-color-fill-neutral-normal-active: rgba(255, 255, 255, 0.16)
+      ha-color-fill-primary-quiet-active: rgba(255, 255, 255, 0.12)
+      ha-color-fill-primary-normal-resting: var(--ha-color-primary-10)
+      ha-color-fill-primary-normal-hover: var(--ha-color-primary-20)
+      ha-color-fill-primary-normal-active: var(--ha-color-primary-10)
+      ha-color-on-primary-normal: var(--ha-color-primary-60)
+      ha-color-on-primary-quiet: var(--ha-color-primary-70)
+      ha-color-surface-default: var(--secondary-background-color)
+      ha-color-surface-low: rgba(255, 255, 255, 0.1)
+      ha-color-surface-lower: rgba(0, 0, 0, 0.15)
+      ha-color-on-surface-default: var(--primary-text-color)
     dark:
       background-image: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/Nezz/homeassistant-visionos-theme/1.1/themes/night.jpg')"
       primary-background-color: rgb(25, 24, 22)
