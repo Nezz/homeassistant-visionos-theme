@@ -20,6 +20,7 @@ Liquid Glass Tinted:
       sidebar-selected-text-color: var(--primary-text-color)
       disabled-color: rgb(120, 120, 128)
       state-icon-color: rgba(0, 0, 0, 0.7)
+      state-climate-heat-color: "#C93400"
       divider-color: rgba(60, 60, 67, 0.2)
       primary-text-color: rgba(0, 0, 0, 0.85)
       secondary-text-color: rgba(60, 60, 67, 0.6)

@@ -30,6 +30,7 @@ Liquid Glass:
       ha-color-surface-low: rgba(255, 255, 255, 0.1)
       ha-color-surface-lower: rgba(0, 0, 0, 0.15)
       ha-color-on-surface-default: var(--primary-text-color)
+      state-humidifier-on-color: var(--cyan-color)
     dark:
       background-image: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/Nezz/homeassistant-visionos-theme/refs/heads/static/macOS_26_Dark.webp')"
       primary-background-color: rgb(18, 11, 25)
