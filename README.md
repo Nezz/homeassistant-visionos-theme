@@ -3,10 +3,13 @@
 Theme inspired by Apple for Home Assistant with automatic dark mode support.
 
 ### Liquid Glass
-<img width="500" alt="ios-light" src="https://github.com/user-attachments/assets/c60d760b-4531-41c2-b8b5-47404e8743d7" /><img width="500" alt="ios-dark" src="https://github.com/user-attachments/assets/273f0e86-180e-42b3-abe0-bab25c359584" />
+<img width="500" alt="liquid-glass-light" src="https://github.com/user-attachments/assets/d1dda7ee-d5af-48b0-aafa-054afd86e505" /><img width="500" alt="liquid-glass-dark" src="https://github.com/user-attachments/assets/94b24d47-8cac-43c0-9ded-e809016cbbca" />
+
+### Liquid Glass Tinted
+<img width="500" alt="liquid-glass-tinted-light" src="https://github.com/user-attachments/assets/990313d4-960c-4da9-8464-190556648f57" /><img width="500" alt="liquid-glass-tinted-dark" src="https://github.com/user-attachments/assets/3b2c7a4a-6fef-428c-824b-ea8b895fbb9a" />
 
 ### visionOS
-<img width="500" alt="vision-light" src="https://github.com/user-attachments/assets/f054c59e-7198-4476-9a2e-4e0caec49df8" /><img width="500" alt="vision-dark" src="https://github.com/user-attachments/assets/61179b34-d25b-4902-9883-91156f5dc659" />
+<img width="500" alt="visionos-light" src="https://github.com/user-attachments/assets/3e01e281-1564-4d17-9a51-be80751e019a" /><img width="500" alt="visionos-dark" src="https://github.com/user-attachments/assets/a179d0d5-4c36-4503-b9d9-96bcd50b87f2" />
 
 ## Installation
 
