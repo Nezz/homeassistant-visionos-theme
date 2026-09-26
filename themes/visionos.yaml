@@ -23,6 +23,7 @@ visionos:
       ha-color-surface-low: rgba(255, 255, 255, 0.1)
       ha-color-surface-lower: rgba(0, 0, 0, 0.15)
       ha-color-on-surface-default: var(--primary-text-color)
+      energy-gas-color: "#FF6961"
     dark:
       background-image: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/Nezz/homeassistant-visionos-theme/1.1/themes/night.jpg')"
       primary-background-color: rgb(25, 24, 22)
