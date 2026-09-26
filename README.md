@@ -10,7 +10,7 @@ Theme inspired by visionOS for Home Assistant with automatic dark mode support.
 
 ## Installation
 
-1. You can install the theme with [HACS](https://hacs.xyz/docs/setup/download):
+1. You can install the theme with [HACS](https://hacs.xyz/docs/use/download/download/):
 
 [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Nezz&repository=homeassistant-visionos-theme&category=theme)
 
