@@ -5,9 +5,10 @@ Liquid Glass:
       primary-background-color: rgb(76, 80, 84)
       secondary-background-color: rgb(76, 80, 84)
       app-header-background-color: rgba(76, 80, 84, 0.3)
-      ha-card-background: rgba(150, 150, 150, 0.3)
+      ha-card-background: rgba(120, 120, 120, 0.3)
       app-theme-color: rgb(91, 138, 168) # Average header color, used on the top of the browser
       ha-card-backdrop-filter: blur(12px) saturate(1.3)
+      secondary-text-color: rgba(255, 255, 255, 0.8)
       ha-dialog-surface-background: rgba(150, 150, 150, 0.3)
       bar-box-shadow: inset 0 0 0 100vmax rgba(76, 80, 84, 0.3), 0 0.5px 0 rgba(0, 0, 0, 0.3)
       glass-edge-color: rgba(0, 0, 0, 0.1)
