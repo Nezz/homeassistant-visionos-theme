@@ -1,12 +1,12 @@
-# visionOS & iOS 26 Liquid Glass Theme
+# iOS 27 & visionOS Liquid Glass Theme
 
-Theme inspired by visionOS for Home Assistant with automatic dark mode support.
-
-### visionOS
-<img width="500" alt="vision-light" src="https://github.com/user-attachments/assets/f054c59e-7198-4476-9a2e-4e0caec49df8" /><img width="500" alt="vision-dark" src="https://github.com/user-attachments/assets/61179b34-d25b-4902-9883-91156f5dc659" />
+Theme inspired by Apple for Home Assistant with automatic dark mode support.
 
 ### Liquid Glass
 <img width="500" alt="ios-light" src="https://github.com/user-attachments/assets/c60d760b-4531-41c2-b8b5-47404e8743d7" /><img width="500" alt="ios-dark" src="https://github.com/user-attachments/assets/273f0e86-180e-42b3-abe0-bab25c359584" />
+
+### visionOS
+<img width="500" alt="vision-light" src="https://github.com/user-attachments/assets/f054c59e-7198-4476-9a2e-4e0caec49df8" /><img width="500" alt="vision-dark" src="https://github.com/user-attachments/assets/61179b34-d25b-4902-9883-91156f5dc659" />
 
 ## Installation
 
@@ -17,7 +17,7 @@ Theme inspired by visionOS for Home Assistant with automatic dark mode support.
 > [!NOTE]  
 > Install the [`uix`](https://github.com/Lint-Free-Technology/uix) integration via HACS to make the sidebar transparent. It's a drop-in replacement for card-mod with backwards compatibility. After installing, don't forget to [add the integration for it](https://uix.lf.technology/quick-start/#add-ui-extension-service).
 
-2. You should see the "Liquid Glass" and "visionos" themes appear in your list of themes.
+2. You should see the "Liquid Glass", "Liquid Glass Tinted" and "visionos" themes appear in your list of themes.
 
 If it's missing, try reloading your themes or adding the following code to your `configuration.yaml` file (reboot required):
 
