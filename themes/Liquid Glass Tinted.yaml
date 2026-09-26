@@ -1,12 +1,12 @@
 Liquid Glass Tinted:
   modes:
     light:
-      background-image: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/Nezz/homeassistant-visionos-theme/refs/heads/static/macOS_26_Light.webp')"
+      background-image: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/Nezz/homeassistant-visionos-theme/refs/heads/static/macOS_27_Light.webp')"
       primary-background-color: rgb(242, 242, 247)
       secondary-background-color: rgb(242, 242, 247)
       app-header-background-color: rgba(245, 245, 247, 0.6)
       ha-card-background: rgba(245, 245, 247, 0.6)
-      app-theme-color: rgb(236, 238, 242)
+      app-theme-color: rgb(206, 199, 194)
       ha-card-backdrop-filter: blur(12px) saturate(1.3)
       ha-dialog-surface-background: rgba(245, 245, 247, 0.8)
       bar-box-shadow: inset 0 0 0 100vmax rgba(245, 245, 247, 0.15), 0 0.5px 0 rgba(0, 0, 0, 0.15)
@@ -49,7 +49,7 @@ Liquid Glass Tinted:
       orange-color: "#FF9500"
       brown-color: "#A2845E"
     dark:
-      background-image: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/Nezz/homeassistant-visionos-theme/refs/heads/static/macOS_26_Dark.webp')"
+      background-image: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/Nezz/homeassistant-visionos-theme/refs/heads/static/macOS_27_Dark.webp')"
       primary-background-color: rgb(28, 28, 30)
       secondary-background-color: rgb(28, 28, 30)
       app-header-background-color: rgba(58, 58, 60, 0.6)
