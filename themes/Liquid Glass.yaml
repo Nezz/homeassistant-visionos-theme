@@ -150,21 +150,19 @@ Liquid Glass:
   ha-color-fill-primary-quiet-hover: rgba(255, 255, 255, 0.2) # selection hover color
 
   card-mod-theme: "Liquid Glass"
-  card-mod-drawer-yaml: |
-    .: |
-      .mdc-drawer {
-        background-color: var(--app-header-background-color) !important;
-        backdrop-filter: var(--ha-card-backdrop-filter);
-      }
+  card-mod-drawer: |
+    .mdc-drawer {
+      background-color: var(--app-header-background-color) !important;
+      backdrop-filter: var(--ha-card-backdrop-filter);
+    }
 
-      .sidebar-shell {
-        background-color: var(--app-header-background-color) !important;
-      }
-      
-    wa-drawer$: |
-      dialog {
-        backdrop-filter: var(--ha-card-backdrop-filter);
-      }
+    .sidebar-shell {
+      background-color: var(--app-header-background-color) !important;
+    }
+
+    wa-drawer::part(dialog) {
+      backdrop-filter: var(--ha-card-backdrop-filter);
+    }
   card-mod-sidebar: |
     :host {
       background: none !important;
@@ -181,92 +179,73 @@ Liquid Glass:
     ha-md-list-item.selected::before {
       border-radius: var(--ha-card-border-radius) !important;
     }
-  card-mod-card-yaml: |
-    .: |
-      ha-card {
-        backdrop-filter: unset !important;
-      }
-      ha-card::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        backdrop-filter: var(--ha-card-backdrop-filter);
-        z-index: -1;
-        pointer-events: none;
-        border-radius: inherit;
-        box-shadow: var(--ha-card-box-shadow);
-      }
-      :host(hui-heading-card) ha-card {
-        background: none !important;
-        backdrop-filter: none !important;
-      }
-      :host(hui-heading-card) ha-card::before {
-        content: none !important;
-      }
+  card-mod-card: |
+    ha-card {
+      backdrop-filter: unset !important;
+    }
+    ha-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      backdrop-filter: var(--ha-card-backdrop-filter);
+      z-index: -1;
+      pointer-events: none;
+      border-radius: inherit;
+      box-shadow: var(--ha-card-box-shadow);
+    }
+    :host(hui-heading-card) ha-card {
+      background: none !important;
+      backdrop-filter: none !important;
+    }
+    :host(hui-heading-card) ha-card::before {
+      content: none !important;
+    }
 
-      /* Energy dashboard */
-      .mdc-data-table,
-      .mdc-data-table__row,
-      .mdc-data-table__header-cell,
-      ha-sankey-chart {
-        background: none !important;
-      }
+    /* Energy dashboard */
+    .mdc-data-table,
+    .mdc-data-table__row,
+    .mdc-data-table__header-cell,
+    ha-sankey-chart {
+      background: none !important;
+    }
 
-      /* Markdown card with text_only */
-      ha-card.text-only {
-        background: none !important;
-        backdrop-filter: none !important;
-        overflow: visible;
-      }
-      ha-card.text-only::before {
-        content: none !important;
-      }
+    /* Markdown card with text_only */
+    ha-card.text-only {
+      background: none !important;
+      backdrop-filter: none !important;
+      overflow: visible;
+    }
+    ha-card.text-only::before {
+      content: none !important;
+    }
 
-      /* Mushroom title card */
-      :host(mushroom-title-card) ha-card {
-        background: none !important;
-        backdrop-filter: none !important;
-      }
-      :host(mushroom-title-card) ha-card::before {
-        content: none !important;
-      }
+    /* Mushroom title card */
+    :host(mushroom-title-card) ha-card {
+      background: none !important;
+      backdrop-filter: none !important;
+    }
+    :host(mushroom-title-card) ha-card::before {
+      content: none !important;
+    }
 
-      /* Mushroom chips card */
-      :host(mushroom-chips-card) ha-card {
-        background: none !important;
-        backdrop-filter: none !important;
-        box-shadow: none !important;
-      }
-      :host(mushroom-chips-card) ha-card::before {
-        content: none !important;
-        background: none !important;
-        backdrop-filter: none !important;
-      }
+    /* Mushroom chips card */
+    :host(mushroom-chips-card) ha-card {
+      background: none !important;
+      backdrop-filter: none !important;
+      box-shadow: none !important;
+    }
+    :host(mushroom-chips-card) ha-card::before {
+      content: none !important;
+      background: none !important;
+      backdrop-filter: none !important;
+    }
 
-    hui-card-features $:
-      hui-card-feature $:
-        hui-target-humidity-card-feature $:
-          ha-control-slider$: |
-            .slider .slider-track-bar {
-              border-radius: 0px !important;
-            }
-        service-call $:
-          custom-feature-slider $: |
-            .default .thumb {
-              border-radius: 0px !important;
-            }
-        hui-cover-position-card-feature $:
-          ha-control-slider$: |
-            .slider .slider-track-bar {
-              border-radius: 0px !important;
-            }
-        hui-cover-tilt-position-card-feature $:
-          ha-control-slider$: |
-            .slider .slider-track-bar {
-              border-radius: 0px !important;
-            }
-        hui-light-brightness-card-feature $:
-          ha-control-slider$: |
-            .slider .slider-track-bar {
-              border-radius: 0px !important;
-            }
+    ha-card:has(ha-tile-icon[data-domain="light"], ha-tile-icon[data-domain="cover"], ha-tile-icon[data-domain="humidifier"], ha-tile-icon[data-domain="climate"]) hui-card-features,
+    :host(hui-humidifier-card) hui-card-features,
+    :host(hui-thermostat-card) hui-card-features {
+      --ha-border-radius-md: 0px;
+    }
+
+    hui-card-features {
+      --thumb-border-radius: 0px;
+    }
