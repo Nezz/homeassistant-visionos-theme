@@ -197,7 +197,9 @@ visionos:
     }
 
     ha-tab-group::part(nav) {
-      mask-image: linear-gradient(90deg, transparent, #000 16px, #000 calc(100% - 16px), transparent);
+      mask:
+        linear-gradient(90deg, transparent, #000 16px, #000 calc(100% - 16px), transparent),
+        linear-gradient(#000, #000) bottom / 100% 4px no-repeat;
     }
   card-mod-state-history-charts: |
     .entry-container:first-of-type {
