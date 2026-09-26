@@ -7,12 +7,24 @@ Liquid Glass:
       app-header-background-color: rgba(76, 80, 84, 0.3)
       ha-card-background: rgba(150, 150, 150, 0.3)
       app-theme-color: rgb(91, 138, 168) # Average header color, used on the top of the browser
+      ha-card-backdrop-filter: blur(12px) saturate(1.3)
+      ha-dialog-surface-background: rgba(150, 150, 150, 0.3)
+      bar-box-shadow: inset 0 0 0 100vmax rgba(76, 80, 84, 0.3), 0 0.5px 0 rgba(0, 0, 0, 0.3)
+      glass-edge-color: rgba(0, 0, 0, 0.1)
+      glass-contrast-background: rgba(0, 0, 0, 0.8)
+      glass-contrast-outline: rgba(255, 255, 255, 0.6)
     dark:
       background-image: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/Nezz/homeassistant-visionos-theme/refs/heads/static/macOS_26_Dark.webp')"
       primary-background-color: rgb(18, 11, 25)
       secondary-background-color: rgb(18, 11, 25)
-      app-header-background-color: rgba(18, 11, 25, 0.3)
-      ha-card-background: rgba(0, 0, 0, 0.3)
+      app-header-background-color: rgba(18, 11, 25, 0.4)
+      ha-card-background: rgba(0, 0, 0, 0.4)
+      ha-card-backdrop-filter: blur(12px) saturate(1.3)
+      ha-dialog-surface-background: rgba(18, 11, 25, 0.6)
+      bar-box-shadow: inset 0 0 0 100vmax rgba(18, 11, 25, 0.4), 0 0.5px 0 rgba(0, 0, 0, 0.4)
+      glass-edge-color: rgba(0, 0, 0, 0.15)
+      glass-contrast-background: rgba(0, 0, 0, 0.8)
+      glass-contrast-outline: rgba(255, 255, 255, 0.6)
       app-theme-color: rgb(0, 0, 0)
   # Global
   lovelace-background: var(--background-image)
@@ -60,9 +72,8 @@ Liquid Glass:
   paper-card-background-color: var(--ha-card-background)
   rgb-card-background-color: rgb(10, 10, 10) # see https://github.com/basnijholt/lovelace-ios-themes/issues/60
   ha-card-border-width: 0 # https://github.com/basnijholt/lovelace-ios-dark-mode-theme/issues/82#event-7732695357
-  ha-card-backdrop-filter: blur(8px)
   ha-card-box-shadow: >
-    3px 3px 0.5px -3.5px rgba(255, 255, 255, 0.30) inset, -2px -2px 0.5px -2px rgba(255, 255, 255, 0.30) inset, 0 0 8px 1px rgba(255, 255, 255, 0.10) inset, 0 0 2px 0 rgba(0, 0, 0, 0.10)
+    3px 3px 0.5px -3.5px rgba(255, 255, 255, 0.7) inset, -2px -2px 0.5px -2px rgba(255, 255, 255, 0.55) inset, 0 0 8px 1px rgba(255, 255, 255, 0.18) inset, 0 0 0 0.5px var(--glass-edge-color), 0 0.5px 1px 0 rgba(0, 0, 0, 0.12)
   # Toggles
   paper-toggle-button-checked-button-color: "#484848"
   paper-toggle-button-checked-bar-color: "#484848"
@@ -79,11 +90,11 @@ Liquid Glass:
   # Dialog
   ha-dialog-surface-backdrop-filter: var(--ha-card-backdrop-filter)
   dialog-box-shadow: var(--ha-card-box-shadow)
-  ha-dialog-surface-background: var(--ha-card-background)
   ha-dialog-scrim-backdrop-filter: none
   # Header
   app-header-backdrop-filter: var(--ha-card-backdrop-filter)
   app-header-edit-background-color: rgba(0, 0, 0, 0.2)
+  app-header-border-bottom: none
   # Colors
   red-color: "#FF453A"
   pink-color: "#FF375F"
@@ -162,11 +173,17 @@ Liquid Glass:
 
     wa-drawer::part(dialog) {
       backdrop-filter: var(--ha-card-backdrop-filter);
+      background-color: var(--app-header-background-color) !important;
+      box-shadow: none !important;
     }
   card-mod-sidebar: |
     :host {
       background: none !important;
       backdrop-filter: var(--ha-card-backdrop-filter);
+    }
+
+    .menu {
+      border-bottom-color: transparent !important;
     }
 
     ha-list-item-button,
@@ -191,11 +208,11 @@ Liquid Glass:
       z-index: -1;
       pointer-events: none;
       border-radius: inherit;
-      box-shadow: var(--ha-card-box-shadow);
     }
     :host(hui-heading-card) ha-card {
       background: none !important;
       backdrop-filter: none !important;
+      box-shadow: none !important;
     }
     :host(hui-heading-card) ha-card::before {
       content: none !important;
@@ -213,6 +230,7 @@ Liquid Glass:
     ha-card.text-only {
       background: none !important;
       backdrop-filter: none !important;
+      box-shadow: none !important;
       overflow: visible;
     }
     ha-card.text-only::before {
@@ -223,6 +241,7 @@ Liquid Glass:
     :host(mushroom-title-card) ha-card {
       background: none !important;
       backdrop-filter: none !important;
+      box-shadow: none !important;
     }
     :host(mushroom-title-card) ha-card::before {
       content: none !important;
@@ -248,4 +267,11 @@ Liquid Glass:
 
     hui-card-features {
       --thumb-border-radius: 0px;
+    }
+
+    @media (prefers-contrast: more) {
+      ha-card {
+        background-color: var(--glass-contrast-background) !important;
+        box-shadow: 0 0 0 1px var(--glass-contrast-outline) !important;
+      }
     }
