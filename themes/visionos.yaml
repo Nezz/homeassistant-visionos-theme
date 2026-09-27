@@ -148,6 +148,12 @@ visionos:
   ha-color-fill-primary-quiet-resting: rgba(255, 255, 255, 0.12) # selection color
   ha-color-fill-primary-quiet-hover: rgba(255, 255, 255, 0.2) # selection hover color
 
+  bubble-main-background-color: var(--ha-card-background)
+  bubble-secondary-background-color: rgba(255, 255, 255, 0.1)
+  bubble-icon-background-color: rgba(0, 0, 0, 0.2)
+  bubble-horizontal-buttons-stack-background-color: transparent
+  bubble-media-player-play-pause-icon-color: var(--primary-text-color)
+  bubble-pop-up-main-background-color: var(--ha-card-background)
   card-mod-theme: "visionos"
   card-mod-drawer: |
     .mdc-drawer {
@@ -246,4 +252,64 @@ visionos:
       content: none !important;
       background: none !important;
       backdrop-filter: none !important;
+    }
+
+    :host(bubble-card) ha-card:has(.bubble-separator)::before,
+    :host(bubble-card) ha-card.horizontal-buttons-stack-card::before {
+      content: none !important;
+    }
+
+    :host(bubble-card) ha-card::before {
+      border-radius: var(--bubble-border-radius, calc(var(--row-height, 56px) / 2));
+      box-shadow: none;
+    }
+
+    :host(bubble-card) ha-card:not(.horizontal-buttons-stack-card):not(:has(.bubble-separator))::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: var(--bubble-border-radius, calc(var(--row-height, 56px) / 2));
+      box-shadow: var(--ha-card-box-shadow);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    :host(bubble-card) .bubble-line {
+      display: none;
+    }
+
+    :host(bubble-card) .bubble-background.bubble-action:not(.bubble-cover-background),
+    :host(bubble-card) .bubble-range-fill {
+      opacity: 0.5 !important;
+    }
+
+    :host(bubble-card) .bubble-play-pause-button {
+      background-color: color-mix(in srgb, var(--bubble-accent-color, var(--bubble-default-color)) 50%, transparent) !important;
+    }
+
+    :host(bubble-card) .bubble-sub-button.background-on:not(.is-select) {
+      background-color: color-mix(in srgb, var(--bubble-sub-button-light-background-color, var(--bubble-accent-color, var(--bubble-default-color))) 50%, transparent) !important;
+    }
+
+    :host(bubble-card) .horizontal-buttons-stack-card .bubble-button {
+      background-color: var(--ha-card-background);
+      backdrop-filter: var(--ha-card-backdrop-filter);
+      box-shadow: var(--ha-card-box-shadow);
+    }
+
+    :host(bubble-card) .horizontal-buttons-stack-card .card-content {
+      mask-image: none !important;
+    }
+
+    :host(bubble-card) .horizontal-buttons-stack-card .bubble-background-color {
+      border-color: transparent !important;
+    }
+
+    :host(bubble-card) .bubble-header .bubble-button-card-container,
+    :host(bubble-card) .bubble-header-action-button {
+      box-shadow: var(--ha-card-box-shadow);
+    }
+
+    :host(bubble-card) .bubble-pop-up {
+      --bubble-pop-up-background-color: var(--ha-dialog-surface-background) !important;
     }
