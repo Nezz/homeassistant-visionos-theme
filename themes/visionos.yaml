@@ -71,9 +71,11 @@ visionos:
   table-row-background-color: var(--primary-background-color)
   table-row-alternative-background-color: var(--secondary-background-color)
   # Dialog
-  ha-dialog-surface-backdrop-filter: var(--ha-card-backdrop-filter)
+  # --ha-space-1 and --ha-color-neutral-50 only exist in the current frontend. HACS runs a 2025 frontend in an iframe, where these values turn invalid and
+  # its old dialogs fall back to no blur and an opaque surface. A blurred surface there breaks fixed-position dropdowns like the version picker.
+  ha-dialog-surface-backdrop-filter: var(--ha-card-backdrop-filter) blur(calc(0 * var(--ha-space-1)))
   dialog-box-shadow: var(--ha-card-box-shadow)
-  ha-dialog-surface-background: var(--ha-card-background)
+  ha-dialog-surface-background: color-mix(in srgb, var(--ha-card-background), var(--ha-color-neutral-50) 0%)
   ha-dialog-scrim-backdrop-filter: none
   # Header
   app-header-backdrop-filter: var(--ha-card-backdrop-filter)
