@@ -255,6 +255,36 @@ visionos:
       backdrop-filter: none !important;
     }
 
+    /* Cards nested in stack-in-card / vertical-stack-in-card */
+    :host(:not(bubble-card)) ha-card[style*="box-shadow: none"] {
+      background: transparent !important;
+    }
+    :host(:not(bubble-card)) ha-card[style*="box-shadow: none"]::before {
+      content: none !important;
+    }
+
+    /* mod-card wrapper */
+    :host(mod-card) ha-card::before {
+      content: none !important;
+    }
+
+    /* mini-media-player sizes its artwork with ha-card::before */
+    :host(mini-media-player) ha-card::before {
+      position: static;
+      backdrop-filter: none;
+      box-shadow: none;
+      z-index: auto;
+    }
+    :host(mini-media-player) ha-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      backdrop-filter: var(--ha-card-backdrop-filter);
+      z-index: -1;
+      pointer-events: none;
+      border-radius: inherit;
+    }
+
     :host(bubble-card) ha-card:has(.bubble-separator)::before,
     :host(bubble-card) ha-card.horizontal-buttons-stack-card::before {
       content: none !important;
