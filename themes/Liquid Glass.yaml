@@ -168,6 +168,7 @@ Liquid Glass:
   bubble-horizontal-buttons-stack-background-color: transparent
   bubble-media-player-play-pause-icon-color: var(--primary-text-color)
   bubble-pop-up-main-background-color: var(--ha-card-background)
+  wa-form-control-padding-inline: var(--ha-space-3)
   card-mod-theme: "Liquid Glass"
   card-mod-drawer: |
     .mdc-drawer {
