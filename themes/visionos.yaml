@@ -285,6 +285,53 @@ visionos:
       border-radius: inherit;
     }
 
+    /* Navbar card */
+    :host(navbar-card) {
+      --navbar-background-color: var(--ha-card-background);
+      --navbar-box-shadow-desktop: var(--ha-card-box-shadow);
+      --navbar-box-shadow-mobile-floating: var(--ha-card-box-shadow);
+      --navbar-border-radius: 999px;
+    }
+    :host(navbar-card) .navbar-card.desktop:not(.docked),
+    :host(navbar-card) .navbar-card.mobile.floating {
+      padding: 6px !important;
+      gap: 0 !important;
+    }
+    :host(navbar-card) .navbar-card.desktop.top:not(.docked) .route,
+    :host(navbar-card) .navbar-card.desktop.bottom:not(.docked) .route {
+      flex: 1;
+    }
+    :host(navbar-card) .route {
+      height: auto !important;
+      padding: 5px 0;
+      border-radius: 999px;
+    }
+    :host(navbar-card) .button ha-ripple {
+      inset: -100px !important;
+    }
+    :host(navbar-card) .route:has(.label) .button {
+      height: calc(var(--navbar-route-icon-size) + 4px) !important;
+    }
+    :host(navbar-card) .route .label {
+      line-height: 14px;
+      position: relative;
+    }
+    :host(navbar-card) .route .button.active {
+      background: color-mix(in srgb, var(--primary-text-color) 12%, transparent);
+      box-shadow: 0 0 0 100px color-mix(in srgb, var(--primary-text-color) 12%, transparent);
+      border-radius: 0;
+    }
+    :host(navbar-card) .label.active {
+      color: var(--navbar-primary-color);
+    }
+    :host(navbar-card) .popup-item .button {
+      backdrop-filter: var(--ha-card-backdrop-filter);
+      border-radius: 999px;
+    }
+    :host(navbar-card) .media-player-bg {
+      opacity: 0.15 !important;
+    }
+
     :host(bubble-card) ha-card:has(.bubble-separator)::before,
     :host(bubble-card) ha-card.horizontal-buttons-stack-card::before {
       content: none !important;
