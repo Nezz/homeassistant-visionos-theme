@@ -20,12 +20,6 @@ Liquid Glass:
       ha-color-fill-neutral-normal-resting: rgba(255, 255, 255, 0.16)
       ha-color-fill-neutral-normal-hover: rgba(255, 255, 255, 0.22)
       ha-color-fill-neutral-normal-active: rgba(255, 255, 255, 0.16)
-      ha-color-fill-primary-quiet-active: rgba(255, 255, 255, 0.12)
-      ha-color-fill-primary-normal-resting: var(--ha-color-primary-10)
-      ha-color-fill-primary-normal-hover: var(--ha-color-primary-20)
-      ha-color-fill-primary-normal-active: var(--ha-color-primary-10)
-      ha-color-on-primary-normal: var(--ha-color-primary-60)
-      ha-color-on-primary-quiet: var(--ha-color-primary-70)
       ha-color-surface-default: var(--secondary-background-color)
       ha-color-surface-low: rgba(255, 255, 255, 0.1)
       ha-color-surface-lower: rgba(0, 0, 0, 0.15)
@@ -170,6 +164,7 @@ Liquid Glass:
   bubble-horizontal-buttons-stack-background-color: transparent
   bubble-media-player-play-pause-icon-color: var(--primary-text-color)
   bubble-pop-up-main-background-color: var(--ha-card-background)
+  bubble-select-list-background-color: var(--card-background-color) # its menu can't be blurred, match HA's own dropdowns
   wa-form-control-padding-inline: var(--ha-space-3)
   card-mod-theme: "Liquid Glass"
   card-mod-drawer: |
@@ -297,6 +292,11 @@ Liquid Glass:
       content: none !important;
     }
 
+    /* Expander Card with clear: true */
+    :host(expander-card) ha-card.clear::before {
+      content: none !important;
+    }
+
     /* mod-card wrapper */
     :host(mod-card) ha-card::before {
       content: none !important;
@@ -326,7 +326,8 @@ Liquid Glass:
       --navbar-box-shadow-mobile-floating: var(--ha-card-box-shadow);
       --navbar-border-radius: 999px;
     }
-    :host(navbar-card) .navbar-card.desktop:not(.docked),
+    :host(navbar-card) .navbar-card.desktop.top:not(.docked),
+    :host(navbar-card) .navbar-card.desktop.bottom:not(.docked),
     :host(navbar-card) .navbar-card.mobile.floating {
       padding: 6px !important;
       gap: 0 !important;
@@ -336,14 +337,17 @@ Liquid Glass:
       flex: 1;
     }
     :host(navbar-card) .route {
+      border-radius: 999px;
+    }
+    /* Vertical desktop bars keep navbar-card's fixed route size */
+    :host(navbar-card) .navbar-card:not(.left):not(.right) .route {
       height: auto !important;
       padding: 5px 0;
-      border-radius: 999px;
     }
     :host(navbar-card) .button ha-ripple {
       inset: -100px !important;
     }
-    :host(navbar-card) .route:has(.label) .button {
+    :host(navbar-card) .navbar-card:not(.left):not(.right) .route:has(.label) .button {
       height: calc(var(--navbar-route-icon-size) + 4px) !important;
     }
     :host(navbar-card) .route .label {
@@ -384,10 +388,6 @@ Liquid Glass:
       box-shadow: var(--ha-card-box-shadow);
       pointer-events: none;
       z-index: 1;
-    }
-
-    :host(bubble-card) .bubble-line {
-      display: none;
     }
 
     :host(bubble-card) .bubble-background.bubble-action:not(.bubble-cover-background),
